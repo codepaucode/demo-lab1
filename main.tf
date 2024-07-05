@@ -1,4 +1,10 @@
 terraform {
+  cloud {
+    organization = "rp_cloud_ph"
+    workspaces {
+      name = "rp_partner_workspace"
+    }
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
